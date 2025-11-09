@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class PlayerSc : MonoBehaviour
 {
@@ -31,9 +32,10 @@ public class PlayerSc : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0) && !isDead)
         {
-            rb.velocity = Vector2.up * flapSpeed;
-            audioManage.PlaySFX(audioManage.jumpSFX);
 
+                rb.velocity = Vector2.up * flapSpeed;
+                audioManage.PlaySFX(audioManage.jumpSFX);
+            
         }
     }
     private void FixedUpdate()
